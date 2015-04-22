@@ -27,7 +27,7 @@ void (*Writer2)();
 
 void reader()
 {
-    printf("*******Reader %d: %p********\n", read, RunQ->head);
+    printf("******* Reader %d: %p********\n", read, RunQ->head);
     read++;
     
     while(1){
@@ -66,7 +66,7 @@ void reader()
 void writer()
 {
     int i;
-    printf("##########Writer %d: %p########\n", write, RunQ->head);
+    printf("########## Writer %d: %p########\n", write, RunQ->head);
     write++;
     
     while(1) {
