@@ -33,7 +33,7 @@ void reader()
     while(1){
         // Reader Start
         P(mx);
-        if(writerWaitingCount>0 || wc>0) {
+        if(writerWaitingCount>0 || writerCount>0) {
             readerWaitingCount++;
             V(mx);
             P(readerSemaphore);
@@ -115,7 +115,7 @@ int main()
     readerSemaphore->queue = new_Queue();
     initSem(readerSemaphore,0);
     
-    writerSemaphore = (Seme*)malloc(sizeof(Sem));
+    writerSemaphore = (Sem*)malloc(sizeof(Sem));
     writerSemaphore->queue = new_Queue();
     initSem(writerSemaphore,0);
     
