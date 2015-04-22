@@ -9,11 +9,11 @@ typedef struct _Sem
 	Queue* queue;
 }Sem;
 
-void InitSem(Sem* sem, int value);
+void initSem(Sem* sem, int value);
 void P(Sem* sem);
 void V(Sem* sem);
 
-void InitSem(Sem* Sem, int value)
+void initSem(Sem* Sem, int value)
 {
 	Sem->count = value;
 }
